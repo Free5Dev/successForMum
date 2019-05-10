@@ -1,0 +1,223 @@
+
+/* elements globaux  de la page*/
+body{
+    background:url('images/fond_jaune.png');
+    font-family: 'Cormorant Garamond','Trebuchet MS' serif;
+    font-size:1em;
+    color: #181818;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+/* main page */
+#main_page{
+    width: 900px;
+    margin: auto;
+}
+/* header */
+header{
+    margin-bottom: 5px;
+    background: url('images/separateur.png') repeat-x bottom;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+#logo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#logoContent{
+    display: flex;
+    align-items: baseline;
+    margin-top: 5px;
+
+}
+#logoContent h1{
+    margin-left: 5px;
+    letter-spacing: 1px;
+    font-family: 'Akronim', cursive;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+#logo h2{
+    font-family: 'Trebuchet MS', cursive;
+    font-style: 1em;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-top: 0;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+nav li{
+    margin-right: 15px;
+}
+nav a{
+    text-transform: uppercase;
+    color: 	rgb(26, 0, 0);
+    font-style: 1em;
+}
+nav a:hover{
+    color: #ff6666;
+    border-bottom:1px solid #ff6666;
+}
+/* banniere */
+#banniere{
+    background: url('images/sanfrancisco.jpg') no-repeat center;
+    height: 220px;
+    margin-bottom:5px;
+    position: relative;
+}
+#banniere_description{
+    position: absolute;
+    bottom: 0px;
+    background-color: 	rgba(0, 0, 0, .5);
+    width: 100%;
+    color: #fff;
+    text-align: right;
+}
+#banniere_description  button{
+    margin-right:5px;
+    border:none;
+    background-color: rgba(255, 0, 0,.8);
+    color: #fff;
+    text-transform: uppercase;
+    font-style: 1.2em;
+    padding: 8px;
+    border-radius: 5px;
+}
+#banniere_description  button:hover{
+    background-color:rgb(255, 0, 0);
+    color: #fff;
+}
+/* section  */
+section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 5px;
+}
+article h1{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-shadow: 3px 3px 3px inset #000;
+}
+article h1 img{
+    margin-right: 5px;
+}
+aside {
+    background-color: rgb(128, 128, 128);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+aside h1{
+    text-transform: uppercase;
+    font-style: italic;
+}
+.zozor_class{
+    border: 1px ridge rgb(128, 128, 128);
+}
+.bull{
+    position: absolute;
+    top:50%;
+    left:-12px;
+    opacity: .9;
+}
+/* footer */
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 5px;
+    background: url('images/ico_top.png') no-repeat top center, url('images/separateur.png') repeat-x top, url('images/ombre.png') repeat-x top;
+    padding: 5px;
+}
+.element{
+    flex:1;
+    padding-top: 0;
+    text-align: center;
+}
+.element h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: normal;
+
+}
+.element:nth-child(2) img{
+    border:1px solid #000;
+}
+.element:nth-child(3) .ul{
+    display: flex;
+    justify-content: space-around;
+}
+.ul li{
+    list-style-image: url('images/ico_liensexterne.png') ;
+}
+.ul a{
+    color: 	rgba(102, 0, 0,.8);
+}
+.ul a:hover{
+    color: 	rgb(102, 0, 0);
+    transition: 1s;
+    border-bottom: 1px solid 	rgb(102, 0, 0);
+    font-style: 1.2em;
+}
+
+/* --------------------------------------MEDIA QUERIES----------------------------------------- */
+@media all  and (max-width:1024px){
+    #main_page{
+        width: auto;
+    }header{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }nav li{
+        margin-bottom: 5px;
+    }#banniere{
+        display: none;
+    }section{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+    }article{
+        width: auto;
+        padding: 5px;
+    }article h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
